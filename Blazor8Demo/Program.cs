@@ -1,3 +1,4 @@
+using Blazor8Demo.BLL;
 using Blazor8Demo.Components;
 using Blazor8Demo.DAL;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ builder.Services.AddDbContextFactory<Contexto>(op =>
     op.UseSqlite(conStr), ServiceLifetime.Scoped
 );
 
+builder.Services.AddScoped<PrioridadesBLL>();
 var app = builder.Build();
 
 
